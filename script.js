@@ -38,7 +38,11 @@ function change(){
     i++;
     if(i < retroColors.length){
     body.style.background = retroColors[i].hex;
+    body.style.transition = "background 0.5s"
     heading.textContent = retroColors[i].name;
+    topBtn.style.color = retroColors[i].hex;
+    topBtn.style.color = "background 0.5s"
+
     }else{
         i = 0;
     }
