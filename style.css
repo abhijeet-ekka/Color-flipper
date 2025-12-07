@@ -7,6 +7,7 @@
 
 body{
      height: 100vh;
+     overflow: hidden;
 }
 
 .cantainer{
@@ -43,6 +44,8 @@ body{
     
 }
 
+
+
 .bottom{
     background-color: rgb(121, 206, 255);
     width: 100%;
@@ -57,7 +60,7 @@ body{
 .bottom::after{
     position: absolute;
     width: 2px;
-    height: 100%;
+    height: 50%;
     background-color: rgb(34, 140, 232);
     bottom: 0.6px;
     right: 6px;
@@ -69,7 +72,7 @@ body{
 .bottom::before{
     position: absolute;
     width: 2px;
-    height: 100%;
+    height: 50%;
     background-color: rgb(34, 140, 232);
     bottom: 0.6px;
     left: 6px;

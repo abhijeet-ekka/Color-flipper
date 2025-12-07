@@ -17,23 +17,31 @@ const retroColors = [
 const heading = document.getElementById("color-name");
 const changeBtn = document.querySelector("#change");
 const body = document.querySelector("body");
+const topBtn = document.querySelector(".top");
+const click = document.getElementById("clickSound");
 
-changeBtn.addEventListener("click", change);
+changeBtn.addEventListener("mousedown", change);
+changeBtn.addEventListener("mouseup", () => {
+    
+    topBtn.style.transform = "translate(0, 0)"});
+changeBtn.addEventListener("mouseleave", () => {
+     topBtn.style.transform = "translate(0, 0)";
+});
+
 let i = -1;
 
+
 function change(){
+    click.play();
+     topBtn.style.transform = "translate(0, 10px)"
+     topBtn.style.transition = "transform 0.1s"
     i++;
-    let size = retroColors.length
-    let random = Math.floor(Math.random() * size);
-    console.log(i)
     if(i < retroColors.length){
     body.style.background = retroColors[i].hex;
     heading.textContent = retroColors[i].name;
     }else{
         i = 0;
     }
-}
-//  let i = 0
-//     for(i; i < retroColors.name.length; i++);
 
-console.log()
+   
+}
