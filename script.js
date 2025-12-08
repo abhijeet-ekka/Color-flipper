@@ -21,14 +21,20 @@ const topBtn = document.querySelector(".top");
 const click = document.getElementById("clickSound");
 
 changeBtn.addEventListener("mousedown", change);
-changeBtn.addEventListener("mouseup", () => {
-    
-    topBtn.style.transform = "translate(0, 0)"});
-changeBtn.addEventListener("mouseleave", () => {
-     topBtn.style.transform = "translate(0, 0)";
-});
+changeBtn.addEventListener("mouseup", resetPress);
+changeBtn.addEventListener("mouseleave", resetPress);
+
+// Touch events for mobile
+changeBtn.addEventListener("touchstart", change);
+changeBtn.addEventListener("touchend", resetPress);
+changeBtn.addEventListener("touchcancel", resetPress);
+
 
 let i = -1;
+
+function resetPress(){
+    topBtn.style.transform = "translate(0, 0)";
+}
 
 
 function change(){
