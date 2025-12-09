@@ -33,15 +33,17 @@ changeBtn.addEventListener("touchcancel", resetPress);
 let i = -1;
 
 function resetPress(){
+    click.play();
     topBtn.style.transform = "translate(0, 0)";
+
 }
 
 
 function change(){
-    click.play();
-     topBtn.style.transform = "translate(0, 10px)"
-     topBtn.style.transition = "transform 0.1s"
     i++;
+    click.play();
+    topBtn.style.transform = "translate(0, 10px)"
+    topBtn.style.transition = "transform 0.1s"
     if(i < retroColors.length){
     body.style.background = retroColors[i].hex;
     body.style.transition = "background 0.5s"
