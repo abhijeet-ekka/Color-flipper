@@ -33,7 +33,6 @@ changeBtn.addEventListener("touchcancel", resetPress);
 let i = -1;
 
 function resetPress(){
-    click.play();
     topBtn.style.transform = "translate(0, 0)";
 
 }
